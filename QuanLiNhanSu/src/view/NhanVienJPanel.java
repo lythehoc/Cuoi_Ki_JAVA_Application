@@ -12,7 +12,7 @@ package view;
 public class NhanVienJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form NhanVienJPanel
+     * Creates new form ThongKeJPanel
      */
     public NhanVienJPanel() {
         initComponents();
@@ -27,19 +27,98 @@ public class NhanVienJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jpnRoot = new javax.swing.JPanel();
+        jtfSearch = new javax.swing.JTextField();
+        jbtAdd = new javax.swing.JButton();
+        jpnView = new javax.swing.JPanel();
+
+        setPreferredSize(new java.awt.Dimension(500, 700));
+
+        jpnRoot.setBackground(new java.awt.Color(255, 204, 102));
+        jpnRoot.setPreferredSize(new java.awt.Dimension(500, 200));
+
+        jtfSearch.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jtfSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfSearchActionPerformed(evt);
+            }
+        });
+
+        jbtAdd.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jbtAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/addemp.png"))); // NOI18N
+        jbtAdd.setText("Thêm mới");
+        jbtAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtAddActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jpnViewLayout = new javax.swing.GroupLayout(jpnView);
+        jpnView.setLayout(jpnViewLayout);
+        jpnViewLayout.setHorizontalGroup(
+            jpnViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jpnViewLayout.setVerticalGroup(
+            jpnViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 379, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jpnRootLayout = new javax.swing.GroupLayout(jpnRoot);
+        jpnRoot.setLayout(jpnRootLayout);
+        jpnRootLayout.setHorizontalGroup(
+            jpnRootLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpnRootLayout.createSequentialGroup()
+                .addContainerGap(14, Short.MAX_VALUE)
+                .addGroup(jpnRootLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpnRootLayout.createSequentialGroup()
+                        .addComponent(jpnView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(jpnRootLayout.createSequentialGroup()
+                        .addComponent(jtfSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 505, Short.MAX_VALUE)
+                        .addComponent(jbtAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(25, 25, 25))))
+        );
+        jpnRootLayout.setVerticalGroup(
+            jpnRootLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpnRootLayout.createSequentialGroup()
+                .addGap(55, 55, 55)
+                .addGroup(jpnRootLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jtfSearch)
+                    .addComponent(jbtAdd, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jpnView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jpnRoot, javax.swing.GroupLayout.PREFERRED_SIZE, 900, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jpnRoot, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jtfSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfSearchActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfSearchActionPerformed
+
+    private void jbtAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtAddActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbtAddActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jbtAdd;
+    private javax.swing.JPanel jpnRoot;
+    private javax.swing.JPanel jpnView;
+    private javax.swing.JTextField jtfSearch;
     // End of variables declaration//GEN-END:variables
 }
