@@ -8,8 +8,8 @@ public class NhanVien implements Serializable {
     private String so_dien_thoai;
     private String dia_chi;
     private Date ngay_sinh;
-    private boolean gioi_tinh;
-    private boolean tinh_trang;
+    private boolean Gioi_tinh;
+    private boolean Tinh_trang;
 
     public void setMa_nhan_vien(int ma_nhan_vien) {
         this.ma_nhan_vien = ma_nhan_vien;
@@ -32,11 +32,11 @@ public class NhanVien implements Serializable {
     }
 
     public void setGioi_tinh(boolean gioi_tinh) {
-        this.gioi_tinh = gioi_tinh;
+        this.Gioi_tinh = gioi_tinh;
     }
 
     public void setTinh_trang(boolean tinh_trang) {
-        this.tinh_trang = tinh_trang;
+        this.Tinh_trang = tinh_trang;
     }
 
     public int getMa_nhan_vien() {
@@ -60,10 +60,10 @@ public class NhanVien implements Serializable {
     }
 
     public boolean isGioi_tinh() {
-        return gioi_tinh;
+        return Gioi_tinh;
     }
 
     public boolean isTinh_trang() {
-        return tinh_trang;
+        return Tinh_trang;
     }
 }

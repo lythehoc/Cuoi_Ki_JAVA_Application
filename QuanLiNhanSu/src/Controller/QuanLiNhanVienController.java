@@ -1,11 +1,14 @@
 package Controller;
 
+
 import Service.NhanVienServiceImpl;
 import Service.NhanVienService;
 import Utility.ClassTableModel;
 import java.awt.CardLayout;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.List;
 import javax.swing.JButton;
 import javax.swing.JPanel;
@@ -19,6 +22,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
 import model.NhanVien;
+import view.NhanVienJFrame;
 
 
 public class QuanLiNhanVienController {
@@ -39,7 +43,7 @@ public class QuanLiNhanVienController {
     public void setDateToTable(){
         List<NhanVien> ListItem  = nhanVienService.getList();
         DefaultTableModel model = new ClassTableModel().setTableNhanVien(ListItem, listColumn);
-        JTable table = new JTable(model);
+        final JTable table = new JTable(model);
         rowSorter = new TableRowSorter<>(table.getModel());
         table.setRowSorter(rowSorter);
         jtfSearch.getDocument().addDocumentListener(new DocumentListener() {
@@ -50,25 +54,21 @@ public class QuanLiNhanVienController {
                 if (text.trim().length() == 0) {
                     rowSorter.setRowFilter(null);
                 } else {
-                    rowSorter.setRowFilter(RowFilter.regexFilter("(?i)" + text));
-                    
+                    rowSorter.setRowFilter(RowFilter.regexFilter("(?i)" + text));             
                 }
             }
-
             @Override
             public void removeUpdate(DocumentEvent e) {
                   String text = jtfSearch.getText();
                 if (text.trim().length() == 0) {
                     rowSorter.setRowFilter(null);
                 } else {
-                    rowSorter.setRowFilter(RowFilter.regexFilter("(?i)" + text));
-                    
+                    rowSorter.setRowFilter(RowFilter.regexFilter("(?i)" + text));   
                 }
             }
 
             @Override
             public void changedUpdate(DocumentEvent e) {
-      
             }
         });
         table.getColumnModel().getColumn(0).setMinWidth(0);
@@ -78,6 +78,33 @@ public class QuanLiNhanVienController {
         table.getColumnModel().getColumn(1).setMinWidth(80);
         table.getColumnModel().getColumn(1).setMaxWidth(80);
         table.getColumnModel().getColumn(1).setPreferredWidth(80);
+        
+        table.addMouseListener(new MouseAdapter(){
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                if (e.getClickCount() == 2 && table.getSelectedRow() != -1) {
+                    DefaultTableModel model = (DefaultTableModel) table.getModel();
+                    int selectedRowIndex = table.getSelectedRow();
+                    selectedRowIndex = table.convertRowIndexToModel(selectedRowIndex);
+                    NhanVien nhanVien = new NhanVien();
+                    
+                    nhanVien.setMa_nhan_vien((int) model.getValueAt(selectedRowIndex, 0));
+                    nhanVien.setHo_ten ( model.getValueAt(selectedRowIndex, 2).toString());
+                    //ngaysinh
+                    nhanVien.setGioi_tinh(model.getValueAt(selectedRowIndex, 4).toString().equalsIgnoreCase("Nam"));
+                    nhanVien.setSo_dien_thoai(model.getValueAt(selectedRowIndex, 5) != null ?
+                            model.getValueAt(selectedRowIndex, 5).toString() : "");
+                    nhanVien.setDia_chi(model.getValueAt(selectedRowIndex, 6) != null ?
+                            model.getValueAt(selectedRowIndex, 6).toString() : "");
+                    nhanVien.setTinh_trang((boolean) model.getValueAt(selectedRowIndex, 7));
+                    NhanVienJFrame frame = new NhanVienJFrame(nhanVien);
+                    frame.setTitle("Thông tin nhân viên");
+                    frame.setResizable(false);
+                    frame.setLocationRelativeTo(null);
+                    frame.setVisible(true);
+                }
+            }
+    });
         
          table.getTableHeader().setFont(new Font("Arial", Font.BOLD, 14));
         table.getTableHeader().setPreferredSize(new Dimension(100, 50));

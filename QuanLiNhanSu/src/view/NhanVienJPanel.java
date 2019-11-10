@@ -2,6 +2,7 @@
 package view;
 
 import Controller.QuanLiNhanVienController;
+import model.NhanVien;
 
 public class NhanVienJPanel extends javax.swing.JPanel {
 
@@ -24,7 +25,7 @@ public class NhanVienJPanel extends javax.swing.JPanel {
         btnAdd = new javax.swing.JButton();
         jpnView = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jtbNhanVien = new javax.swing.JTable();
 
         setPreferredSize(new java.awt.Dimension(500, 700));
 
@@ -47,7 +48,7 @@ public class NhanVienJPanel extends javax.swing.JPanel {
             }
         });
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jtbNhanVien.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -55,7 +56,7 @@ public class NhanVienJPanel extends javax.swing.JPanel {
                 "Mã nhân viên", "Số thứ tự", "Họ và tên", "Ngày sinh", "Giới tính", "Số điện thoại", "Địa chỉ", "Trình trạng"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(jtbNhanVien);
 
         javax.swing.GroupLayout jpnViewLayout = new javax.swing.GroupLayout(jpnView);
         jpnView.setLayout(jpnViewLayout);
@@ -124,9 +125,9 @@ public class NhanVienJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdd;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JPanel jpnRoot;
     private javax.swing.JPanel jpnView;
+    private javax.swing.JTable jtbNhanVien;
     private javax.swing.JTextField jtfSearch;
     // End of variables declaration//GEN-END:variables
 }
