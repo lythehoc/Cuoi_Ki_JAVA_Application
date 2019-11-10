@@ -31,7 +31,6 @@ public class ThongKeJPanel extends javax.swing.JPanel {
 
         setPreferredSize(new java.awt.Dimension(500, 700));
 
-        jPanel1.setBackground(new java.awt.Color(255, 204, 102));
         jPanel1.setPreferredSize(new java.awt.Dimension(500, 200));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
