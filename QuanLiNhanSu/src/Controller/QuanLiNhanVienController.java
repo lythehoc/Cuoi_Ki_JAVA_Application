@@ -5,6 +5,7 @@ import Service.NhanVienServiceImpl;
 import Service.NhanVienService;
 import Utility.ClassTableModel;
 import java.awt.CardLayout;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.event.MouseAdapter;
@@ -23,6 +24,8 @@ import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
 import model.NhanVien;
 import view.NhanVienJFrame;
+import java.util.Date;
+import java.text.SimpleDateFormat;
 
 
 public class QuanLiNhanVienController {
@@ -80,6 +83,7 @@ public class QuanLiNhanVienController {
         table.getColumnModel().getColumn(1).setPreferredWidth(80);
         
         table.addMouseListener(new MouseAdapter(){
+    
             @Override
             public void mouseClicked(MouseEvent e) {
                 if (e.getClickCount() == 2 && table.getSelectedRow() != -1) {
@@ -90,13 +94,14 @@ public class QuanLiNhanVienController {
                     
                     nhanVien.setMa_nhan_vien((int) model.getValueAt(selectedRowIndex, 0));
                     nhanVien.setHo_ten ( model.getValueAt(selectedRowIndex, 2).toString());
-                    //ngaysinh
+                    nhanVien.setNgay_sinh((java.sql.Date) (Date) model.getValueAt(selectedRowIndex, 3));
                     nhanVien.setGioi_tinh(model.getValueAt(selectedRowIndex, 4).toString().equalsIgnoreCase("Nam"));
                     nhanVien.setSo_dien_thoai(model.getValueAt(selectedRowIndex, 5) != null ?
                             model.getValueAt(selectedRowIndex, 5).toString() : "");
                     nhanVien.setDia_chi(model.getValueAt(selectedRowIndex, 6) != null ?
                             model.getValueAt(selectedRowIndex, 6).toString() : "");
                     nhanVien.setTinh_trang((boolean) model.getValueAt(selectedRowIndex, 7));
+                    
                     NhanVienJFrame frame = new NhanVienJFrame(nhanVien);
                     frame.setTitle("Thông tin nhân viên");
                     frame.setResizable(false);
@@ -121,4 +126,28 @@ public class QuanLiNhanVienController {
         jpnView.validate();
         jpnView.repaint();
     }
+        public void setEvent(){
+        btnAdd.addMouseListener(new MouseAdapter() {
+
+             @Override
+                public void mouseClicked(MouseEvent e) {
+                   NhanVienJFrame frame = new NhanVienJFrame(new NhanVien());
+                   frame.setTitle("Thông tin nhân viên");
+                   frame.setLocationRelativeTo(null);
+                   frame.setResizable(false);
+                   frame.setVisible(true);
+                }
+
+                @Override
+                public void mouseEntered(MouseEvent e) {
+                    btnAdd.setBackground(new Color(0, 200, 83));
+                }
+
+                @Override
+                public void mouseExited(MouseEvent e) {
+                     btnAdd.setBackground(new Color(100, 221, 23));
+                }
+        });
+        }
+        
 }

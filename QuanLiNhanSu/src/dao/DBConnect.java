@@ -18,12 +18,12 @@ public class DBConnect {
         String password = "abc123!";
         try {
             cons = DriverManager.getConnection(url, user, password);
-            //NhanVienDao nhanVienDao = null;
+            NhanVienDao nhanVienDao = null;
         return cons;
 
     }
-    catch (Exception ex){
-    ex.printStackTrace();
+    catch (Exception e){
+    e.printStackTrace();
    }
     return null;
 }

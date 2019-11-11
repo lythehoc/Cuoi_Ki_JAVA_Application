@@ -13,6 +13,7 @@ public class NhanVienJPanel extends javax.swing.JPanel {
         initComponents();
         QuanLiNhanVienController controller = new QuanLiNhanVienController(jpnView, btnAdd, jtfSearch);
         controller.setDateToTable();
+        controller.setEvent();
     }
 
 

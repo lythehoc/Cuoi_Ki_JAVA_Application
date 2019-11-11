@@ -14,12 +14,18 @@ import model.NhanVien;
 public class NhanVienServiceImpl implements NhanVienService{
 
     private NhanVienDao nhanVienDao = null;
+    
     public NhanVienServiceImpl(){
-     nhanVienDao = new NhanVienDaoImpl();
+     this.nhanVienDao = new NhanVienDaoImpl();
     }
+    
     @Override
     public List<NhanVien> getList() {
         return nhanVienDao.getList();
-    
+    }
+
+    @Override
+    public int createOrUpdate(NhanVien nhanVien) {
+        return nhanVienDao.createOrUpdate(nhanVien);
     }
 }
