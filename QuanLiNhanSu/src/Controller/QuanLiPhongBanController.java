@@ -1,7 +1,7 @@
 package Controller;
 
-import Service.NhanVienServiceImpl;
 import Service.NhanVienService;
+import Service.NhanVienServiceImpl;
 import Utility.ClassTableModel;
 import java.awt.CardLayout;
 import java.awt.Color;
@@ -9,6 +9,7 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.Date;
 import java.util.List;
 import javax.swing.JButton;
 import javax.swing.JPanel;
@@ -23,16 +24,23 @@ import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
 import model.NhanVien;
 import view.NhanVienJFrame;
-import java.util.Date;
 
-public class QuanLiNhanVienController {
+public class QuanLiPhongBanController {
     private JPanel jpnView;
     private JButton btnAdd;
     private JTextField jtfSearch;
-     private NhanVienService nhanVienService =null;
+     private NhanVienService duAnService =null;
       private String[] listColumn = {"Mã nhân viên", "STT", "Tên nhân viên", "Ngày sinh",
         "Giới tính", "Số điện thoại", "Địa chỉ", "Trình trạng"};
       private TableRowSorter<TableModel> rowSorter = null;
+
+    public QuanLiPhongBanController(JPanel jpnView, JButton btnAdd, JTextField jtfSearch) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public QuanLiDuAnController(JPanel jpnView, JButton btnAdd, JTextField jtfSearch) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     public QuanLiNhanVienController(JPanel jpnView, JButton btnAdd, JTextField jtfSearch) {
         this.jpnView = jpnView;

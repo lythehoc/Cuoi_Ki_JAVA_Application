@@ -1,9 +1,7 @@
-
 package bean;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-
 
 public class danhMucBean {
     private String kind;
@@ -42,5 +40,4 @@ public class danhMucBean {
     public void setJlb(JLabel jlb) {
         this.jlb = jlb;
     }
-    
 }

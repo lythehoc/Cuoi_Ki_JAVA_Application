@@ -1,9 +1,9 @@
-package dao;
+package Service;
 
 import java.util.List;
 import model.NhanVien;
 
-public interface NhanVienDao {
-    public List<NhanVien> getList();
+public class PhongBanService {
+        public List<NhanVien> getList();
     public int createOrUpdate(NhanVien nhanVien);
 }

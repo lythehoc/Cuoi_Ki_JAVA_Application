@@ -16,8 +16,8 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import model.NhanVien;
 
-public class NhanVienController {
-    private JButton btnSubmit;
+public class PhongBanController {
+     private JButton btnSubmit;
     private JTextField jtfMaNhanVien;
     private JTextField jtfHoTen;
     private JDateChooser jdcNgaySinh;

@@ -1,4 +1,3 @@
-
 package view;
 
 public class TrangChuJPanel extends javax.swing.JPanel {
@@ -6,7 +5,7 @@ public class TrangChuJPanel extends javax.swing.JPanel {
     public TrangChuJPanel() {
         initComponents();
     }
-
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -192,7 +191,6 @@ public class TrangChuJPanel extends javax.swing.JPanel {
             .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
     }// </editor-fold>//GEN-END:initComponents
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;

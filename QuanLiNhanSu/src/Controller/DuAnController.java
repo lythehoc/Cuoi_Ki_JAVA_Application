@@ -16,7 +16,7 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import model.NhanVien;
 
-public class NhanVienController {
+public class DuAnController {
     private JButton btnSubmit;
     private JTextField jtfMaNhanVien;
     private JTextField jtfHoTen;

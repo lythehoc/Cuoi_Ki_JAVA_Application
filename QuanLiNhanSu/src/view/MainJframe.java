@@ -1,4 +1,3 @@
-
 package view;
 
 import Controller.ChuyenManHinhController;
@@ -24,7 +23,6 @@ public class MainJframe extends javax.swing.JFrame {
         controller.setEvent(listItem);
     }
     
- 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

@@ -8,27 +8,27 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import model.DuAn;
 import model.NhanVien;
 
-public class NhanVienDaoImpl implements NhanVienDao{
+public class DuAnDaoImpl implements DuAnDao{
     @Override
-    public List<NhanVien> getList() {
+    public List<DuAn> getList() {
          try{
-             List<NhanVien> list;
+             List<DuAn> list;
              try (Connection cons = DBConnect.getConnection()) {
-                 String sql = "SELECT * FROM nhan_vien";
+                 String sql = "SELECT * FROM du_an";
                  list = new ArrayList<>();
                  Statement ps = cons.createStatement();
                  ResultSet rs = ps.executeQuery(sql);
                  while(rs.next()){
-                     NhanVien nhanVien = new NhanVien();
-                     nhanVien.setMa_nhan_vien(rs.getInt("ma_nhan_vien"));
-                     nhanVien.setHo_ten(rs.getString("ho_ten"));
-                     nhanVien.setNgay_sinh(rs.getDate("ngay_sinh"));
-                     nhanVien.setGioi_tinh(rs.getBoolean("gioi_tinh"));
-                     nhanVien.setSo_dien_thoai(rs.getString("so_dien_thoai"));
-                     nhanVien.setDia_chi(rs.getString("dia_chi"));
-                     nhanVien.setTinh_trang(rs.getBoolean("tinh_trang"));        
+                     DuAn duAn = new DuAn();
+                     duAn.setMa_nhan_vien(rs.getInt("ma_nhan_vien"));
+                     duAn.setHo_ten(rs.getString("ho_ten"));
+                     duAn.setNgay_sinh(rs.getDate("ngay_sinh"));
+                     duAn.setGioi_tinh(rs.getBoolean("gioi_tinh"));
+                     duAn.setSo_dien_thoai(rs.getString("so_dien_thoai"));
+                     duAn.setDia_chi(rs.getString("dia_chi"));
                      list.add(nhanVien);
                 }        
                 ps.close();

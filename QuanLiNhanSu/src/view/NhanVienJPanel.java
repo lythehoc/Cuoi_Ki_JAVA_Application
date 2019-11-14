@@ -1,4 +1,3 @@
-
 package view;
 
 import Controller.QuanLiNhanVienController;
@@ -6,9 +5,6 @@ import model.NhanVien;
 
 public class NhanVienJPanel extends javax.swing.JPanel {
 
-    /**
-     * Creates new form ThongKeJPanel
-     */
     public NhanVienJPanel() {
         initComponents();
         QuanLiNhanVienController controller = new QuanLiNhanVienController(jpnView, btnAdd, jtfSearch);
@@ -16,13 +12,13 @@ public class NhanVienJPanel extends javax.swing.JPanel {
         controller.setEvent();
     }
 
-
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jpnRoot = new javax.swing.JPanel();
         jtfSearch = new javax.swing.JTextField();
+        btnDelete = new javax.swing.JButton();
         btnAdd = new javax.swing.JButton();
         jpnView = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -38,6 +34,11 @@ public class NhanVienJPanel extends javax.swing.JPanel {
                 jtfSearchActionPerformed(evt);
             }
         });
+
+        btnDelete.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnDelete.setForeground(new java.awt.Color(204, 0, 0));
+        btnDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btn_delete.png"))); // NOI18N
+        btnDelete.setText("Xóa");
 
         btnAdd.setBackground(new java.awt.Color(51, 0, 255));
         btnAdd.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -69,7 +70,7 @@ public class NhanVienJPanel extends javax.swing.JPanel {
         );
         jpnViewLayout.setVerticalGroup(
             jpnViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 458, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 457, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jpnRootLayout = new javax.swing.GroupLayout(jpnRoot);
@@ -85,6 +86,8 @@ public class NhanVienJPanel extends javax.swing.JPanel {
                     .addGroup(jpnRootLayout.createSequentialGroup()
                         .addComponent(jtfSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(41, 41, 41)
                         .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(25, 25, 25))))
         );
@@ -94,7 +97,9 @@ public class NhanVienJPanel extends javax.swing.JPanel {
                 .addGap(55, 55, 55)
                 .addGroup(jpnRootLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jtfSearch)
-                    .addComponent(btnAdd, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE))
+                    .addGroup(jpnRootLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnAdd, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
+                        .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(jpnView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
@@ -122,9 +127,9 @@ public class NhanVienJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnAddActionPerformed
 
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdd;
+    private javax.swing.JButton btnDelete;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel jpnRoot;
     private javax.swing.JPanel jpnView;

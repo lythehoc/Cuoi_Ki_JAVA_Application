@@ -59,6 +59,4 @@ public class DuAn implements Serializable {
     public boolean isTinh_trang() {
         return tinh_trang;
     }
-
- 
 }
