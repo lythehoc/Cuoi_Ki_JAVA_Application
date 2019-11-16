@@ -44,7 +44,7 @@ public class PhongBanJFrame extends javax.swing.JFrame {
         jLabel1.setText("Mã phòng ban");
 
         jLabel2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jLabel2.setText("Mã dự án");
+        jLabel2.setText("Số lượng nhân viên");
 
         jLabel3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel3.setText("Mô tả");
@@ -60,7 +60,7 @@ public class PhongBanJFrame extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jtaMoTa);
 
         jLabel6.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jLabel6.setText("Số lượng nhân viên");
+        jLabel6.setText("Số lượng dự án");
 
         jLabel7.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel7.setText("Tình trạng");

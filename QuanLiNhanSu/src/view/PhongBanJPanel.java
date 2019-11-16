@@ -41,7 +41,7 @@ public class PhongBanJPanel extends javax.swing.JPanel {
 
             },
             new String [] {
-                "STT", "Tên phòng ban", "Mô tả", "Số nhân viên", "Tình trạng"
+                "STT", "Tên phòng ban", "Số nhân viên", "Số dự án", "Mô tả", "Tình trạng"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
