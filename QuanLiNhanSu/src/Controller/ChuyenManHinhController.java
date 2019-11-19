@@ -79,25 +79,20 @@ public class ChuyenManHinhController {
             root.repaint();
             setChangeBackgound(kind);
         }
- 
         @Override
         public void mousePressed(MouseEvent e) {
             kindSelected = kind;
             jpnItem.setBackground(new Color(96, 100, 191));
             jlbItem.setBackground(new Color(96, 100, 191));
         }
- 
         @Override
         public void mouseReleased(MouseEvent e) {
- 
         }
- 
-        @Override
+         @Override
         public void mouseEntered(MouseEvent e) {
             jpnItem.setBackground(new Color(96, 100, 191));
             jlbItem.setBackground(new Color(96, 100, 191));
-        }
- 
+        } 
         @Override
         public void mouseExited(MouseEvent e) {
             if (!kindSelected.equalsIgnoreCase(kind)) {

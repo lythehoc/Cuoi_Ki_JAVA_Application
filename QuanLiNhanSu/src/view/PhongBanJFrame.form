@@ -58,7 +58,7 @@
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="btnSubmit" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnUpdate" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -71,7 +71,7 @@
                   <EmptySpace pref="12" max="32767" attributes="0"/>
                   <Component id="jlbMsg" min="-2" pref="35" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                  <Component id="btnSubmit" min="-2" pref="35" max="-2" attributes="0"/>
+                  <Component id="btnUpdate" min="-2" pref="35" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
@@ -80,12 +80,12 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="btnSubmit">
+        <Component class="javax.swing.JButton" name="btnUpdate">
           <Properties>
-            <Property name="text" type="java.lang.String" value="L&#x1b0;u d&#x1eef; li&#x1ec7;u"/>
+            <Property name="text" type="java.lang.String" value="C&#x1ead;p nh&#x1ead;t"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSubmitActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUpdateActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jlbMsg">

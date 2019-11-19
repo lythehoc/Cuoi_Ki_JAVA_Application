@@ -11,7 +11,7 @@ public class PhongBanJFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        btnSubmit = new javax.swing.JButton();
+        btnUpdate = new javax.swing.JButton();
         jlbMsg = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -28,10 +28,10 @@ public class PhongBanJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btnSubmit.setText("Lưu dữ liệu");
-        btnSubmit.addActionListener(new java.awt.event.ActionListener() {
+        btnUpdate.setText("Cập nhật");
+        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSubmitActionPerformed(evt);
+                btnUpdateActionPerformed(evt);
             }
         });
 
@@ -130,7 +130,7 @@ public class PhongBanJFrame extends javax.swing.JFrame {
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnSubmit)))
+                        .addComponent(btnUpdate)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -139,7 +139,7 @@ public class PhongBanJFrame extends javax.swing.JFrame {
                 .addContainerGap(12, Short.MAX_VALUE)
                 .addComponent(jlbMsg, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(3, 3, 3)
-                .addComponent(btnSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -163,9 +163,9 @@ public class PhongBanJFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
+    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnSubmitActionPerformed
+    }//GEN-LAST:event_btnUpdateActionPerformed
 
     private void jtfMaPhongBanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfMaPhongBanActionPerformed
         // TODO add your handling code here:
@@ -207,7 +207,7 @@ public class PhongBanJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnSubmit;
+    private javax.swing.JButton btnUpdate;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
