@@ -8,9 +8,6 @@ public class danhMucBean {
     private JPanel jpn;
     private JLabel jlb;
 
-    public danhMucBean() {
-    }
-
     public danhMucBean(String kind, JPanel jpn, JLabel jlb) {
         this.kind = kind;
         this.jpn = jpn;

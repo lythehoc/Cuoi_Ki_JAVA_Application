@@ -11,7 +11,6 @@ import javax.swing.JPanel;
 import view.DuAnJPanel;
 import view.NhanVienJPanel;
 import view.PhongBanJPanel;
-import view.ThongKeJPanel;
 import view.TrangChuJPanel;
 
 public class ChuyenManHinhController {
@@ -45,7 +44,7 @@ public class ChuyenManHinhController {
         private String kind;
         private JPanel jpnItem;
         private JLabel jlbItem;
-        public LabelEvent(String kind, JPanel jpnItem, JLabel jlbItem) {
+        public LabelEvent(String kind, JPanel jpnItem, JLabel jlbItem){
            this.kind = kind;
            this.jpnItem = jpnItem;
            this.jlbItem = jlbItem;
@@ -64,9 +63,6 @@ public class ChuyenManHinhController {
                     break;
                 case "PhongBan":
                     node = new PhongBanJPanel();
-                    break;
-                case "ThongKe":
-                    node = new ThongKeJPanel();
                     break;
                 default:
                     node = new TrangChuJPanel();

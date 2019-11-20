@@ -206,6 +206,7 @@ public class NhanVienJPanel extends javax.swing.JPanel {
                 .addContainerGap(20, Short.MAX_VALUE))
         );
 
+        btnReset.setBackground(new java.awt.Color(204, 255, 204));
         btnReset.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnReset.setForeground(new java.awt.Color(0, 153, 153));
         btnReset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/gtk-refresh.png"))); // NOI18N
@@ -216,6 +217,7 @@ public class NhanVienJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnAdd.setBackground(new java.awt.Color(255, 255, 204));
         btnAdd.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnAdd.setForeground(new java.awt.Color(153, 0, 153));
         btnAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/addemp.png"))); // NOI18N
@@ -226,7 +228,7 @@ public class NhanVienJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnUpdate.setBackground(new java.awt.Color(204, 204, 0));
+        btnUpdate.setBackground(new java.awt.Color(204, 204, 204));
         btnUpdate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnUpdate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btn_save.png"))); // NOI18N
         btnUpdate.setText("Cập nhật");
@@ -236,6 +238,7 @@ public class NhanVienJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnDelete.setBackground(new java.awt.Color(204, 204, 0));
         btnDelete.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnDelete.setForeground(new java.awt.Color(204, 0, 0));
         btnDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btn_delete.png"))); // NOI18N
