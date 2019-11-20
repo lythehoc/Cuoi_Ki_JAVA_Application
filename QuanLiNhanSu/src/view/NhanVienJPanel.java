@@ -10,45 +10,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JButton;
-import javax.swing.JCheckBox;
-import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JRadioButton;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 import model.NhanVien;
 
 public class NhanVienJPanel extends javax.swing.JPanel {
-    private JPanel jpnChinh;
-    private JPanel jpnDetail;
-    private JPanel jPanel1;
-    private JPanel jPanel2;
-    private JLabel jLabel2;
-    private JLabel jLabel4;
-    private JLabel jLabel3;
-    private JLabel jLabel5;
-    private JTextField jtfNgaySinh;
-    private JRadioButton jrdNam;
-    private JRadioButton jrdNu;
-    private JCheckBox jcbTinhTrang;
-    private JLabel jLabel6;
-    private JLabel jLabel7;
-    private JTextField jtfSoDienThoai;
-    private JScrollPane jScrollPane2;
-    private JTextArea jtaDiaChi;
-    private JButton btnReset;
-    private JButton btnAdd;
-    private JButton btnUpdate;
-    private JButton btnDelete;
-    private JScrollPane jScrollPane1;
-    private JTable jtbNhanVien;
-    private JTextField jtfHoTen;
-
     public NhanVienJPanel() {
         initComponents();
         showNhanVien();
@@ -219,7 +185,6 @@ public class NhanVienJPanel extends javax.swing.JPanel {
                         .addGap(30, 30, 30)))
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jtfNgaySinh, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -233,18 +198,17 @@ public class NhanVienJPanel extends javax.swing.JPanel {
                             .addComponent(jcbTinhTrang)
                             .addComponent(jLabel5)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(7, 7, 7)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(7, 7, 7)
-                                .addComponent(jLabel7))
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(37, 37, 37)))
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel7))
+                        .addGap(30, 30, 30)))
                 .addContainerGap(20, Short.MAX_VALUE))
         );
 
         btnReset.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnReset.setForeground(new java.awt.Color(204, 0, 0));
-        btnReset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btn_delete.png"))); // NOI18N
+        btnReset.setForeground(new java.awt.Color(0, 153, 153));
+        btnReset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/gtk-refresh.png"))); // NOI18N
         btnReset.setText("Đặt lại");
         btnReset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -253,8 +217,8 @@ public class NhanVienJPanel extends javax.swing.JPanel {
         });
 
         btnAdd.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnAdd.setForeground(new java.awt.Color(204, 0, 0));
-        btnAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btn_delete.png"))); // NOI18N
+        btnAdd.setForeground(new java.awt.Color(153, 0, 153));
+        btnAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/addemp.png"))); // NOI18N
         btnAdd.setText("Thêm");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -262,9 +226,9 @@ public class NhanVienJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnUpdate.setBackground(new java.awt.Color(51, 0, 255));
-        btnUpdate.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        btnUpdate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/addemp.png"))); // NOI18N
+        btnUpdate.setBackground(new java.awt.Color(204, 204, 0));
+        btnUpdate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnUpdate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btn_save.png"))); // NOI18N
         btnUpdate.setText("Cập nhật");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -287,15 +251,15 @@ public class NhanVienJPanel extends javax.swing.JPanel {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnDelete)
-                .addGap(117, 117, 117)
-                .addComponent(btnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(105, 105, 105)
-                .addComponent(btnReset)
-                .addGap(87, 87, 87)
-                .addComponent(btnAdd)
-                .addGap(20, 20, 20))
+                .addGap(56, 56, 56)
+                .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(121, 121, 121)
+                .addComponent(btnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(92, 92, 92)
+                .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34))
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
@@ -358,7 +322,7 @@ public class NhanVienJPanel extends javax.swing.JPanel {
         jpnChinhLayout.setVerticalGroup(
             jpnChinhLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpnChinhLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(12, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jpnDetail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -448,7 +412,7 @@ public class NhanVienJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_jtbNhanVienMouseClicked
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
-        int opt = JOptionPane.showConfirmDialog(null, "Ban co that su muon xoa khong?",  "Xóa", JOptionPane.YES_NO_OPTION);
+        int opt = JOptionPane.showConfirmDialog(null, "Bạn có thật sự muốn xóa không?",  "Xóa", JOptionPane.YES_NO_OPTION);
         if (opt ==0){ 
         Connection cons = DBConnect.getConnection();
         String Id;
@@ -508,7 +472,7 @@ public class NhanVienJPanel extends javax.swing.JPanel {
             cons.close();
         } catch (SQLException ex) {
             Logger.getLogger(NhanVienJPanel.class.getName()).log(Level.SEVERE, null, ex);
-        }                                      
+        }                                     
 
     }//GEN-LAST:event_btnAddActionPerformed
 
@@ -520,7 +484,7 @@ public class NhanVienJPanel extends javax.swing.JPanel {
         jtaDiaChi.setText("");
         jcbTinhTrang.setSelected(true);
     }//GEN-LAST:event_btnResetActionPerformed
-}
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnDelete;
@@ -547,4 +511,4 @@ public class NhanVienJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField jtfNgaySinh;
     private javax.swing.JTextField jtfSoDienThoai;
     // End of variables declaration//GEN-END:variables
-
+}
